@@ -212,7 +212,7 @@ if(BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()
 
-option(BUILD_DOCUMENTATION "Build documentation" ON)
+option(BUILD_DOCUMENTATION "Build documentation" OFF)
 if(BUILD_DOCUMENTATION)
   add_subdirectory(doc)
 endif()
