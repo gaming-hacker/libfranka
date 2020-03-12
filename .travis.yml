@@ -19,6 +19,7 @@ addons:
     packages:
     - build-essential
     - software-properties-common
+    - doxygen
     - apache2
     - nasm
     - yasm

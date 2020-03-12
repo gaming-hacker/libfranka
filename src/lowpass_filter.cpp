@@ -3,14 +3,8 @@
 
 #include <franka/lowpass_filter.h>
 
-//------------g alexander mac osx ---------------------//
-#if defined (APPLE)
-#include </opt/local/include/eigen3/Eigen/Dense>
-#include </opt/local/include/eigen3/Eigen/Geometry>
-#else
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
-#endif
 
 namespace franka {
 

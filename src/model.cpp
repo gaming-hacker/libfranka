@@ -1,16 +1,10 @@
 // Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
+#include <Eigen/Core>
 #include <franka/model.h>
 #include <research_interface/robot/service_types.h>
 
 #include <sstream>
-
-//------------g alexander mac osx ---------------------//
-#if defined(APPLE)
-#include </opt/local/include/eigen3/Eigen/Core>
-#else
-#include <Eigen/Core>
-#endif
 
 #include "model_library.h"
 #include "network.h"

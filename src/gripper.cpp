@@ -1,11 +1,9 @@
 // Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
 #include <franka/gripper.h>
-
-#include <sstream>
-
 #include <franka/exception.h>
 #include <research_interface/gripper/types.h>
+#include <sstream>
 
 #include "network.h"
 

@@ -1,15 +1,8 @@
 // Copyright (c) 2017 Franka Emika GmbH
 // Use of this source code is governed by the Apache-2.0 license, see LICENSE
-#include <franka/rate_limiting.h>
-
-//------------g alexander mac osx ---------------------//
-#if defined (APPLE)
-#include </opt/local/include/eigen3/Eigen/Dense>
-#else
 #include <Eigen/Dense>
-#endif
-
 #include <franka/control_tools.h>
+#include <franka/rate_limiting.h>
 
 namespace franka {
 

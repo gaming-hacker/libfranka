@@ -7,8 +7,6 @@
 #include <iterator>
 #include <sstream>
 
-
-
 using Error = research_interface::robot::Error;
 
 namespace franka {
