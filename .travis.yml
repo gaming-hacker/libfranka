@@ -5,7 +5,7 @@ dist: bionic
 arch: amd64
 
 git:
-  depth: 10
+  depth: 3
 
 cache:
   apt: true
@@ -40,7 +40,7 @@ env:
     - OMP_NUM_THREADS=8
     - GOTO_NUM_THREADS=8
     - CFLAGS="-O3 -pipe -m64 -mavx -mavx2 -mfma -mfpmath=sse -msse2 -msse3 -msse4.1 -msse4.2 -fomit-frame-pointer -fno-common"
-    - DMACROS="-DAPPLE -DNDEBUG -DHAVE_NASM -DNDEBUG -DPIC -DUSE_PTHREAD -D_REENTRANT -D_THREAD_SAFE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
+    - DMACROS="-DNDEBUG -DHAVE_NASM -DPIC -DUSE_PTHREAD -D_REENTRANT -D_THREAD_SAFE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
     - CXXFLAGS="$CFLAGS -std=c++17 $DMACROS"
     - CFLAGS="$CFLAGS -std=c11 $DMACROS"
     - ASFLAGS="-f elf64"
@@ -51,6 +51,7 @@ env:
 jobs:
   include:
     - env: CI_DISTRO=bionic CI_TARGET=release
+    - env: CI_DISTRO=bionic CI_TARGET=release CXXFLAGS="$CXXFLAGS -DNREALTIME" CFLAGS="$CFLAGS -DNREALTIME"
 
 before_install:
   - echo "before install $PWD"
