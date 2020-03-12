@@ -244,7 +244,7 @@ class CartesianVelocities : public Finishable {
    * Desired Cartesian velocity w.r.t. O-frame {dx in [m/s], dy in [m/s], dz in [m/s], omegax in
    * [rad/s], omegay in [rad/s], omegaz in [rad/s]}.
    */
-  std::array<double, 6> O_dP_EE{};  // NOLINT(readability-identifier-naming)
+  std::array<double, 6> O_dP_EE{};
 
   /**
    * Elbow configuration.
@@ -286,7 +286,7 @@ inline Torques MotionFinished(Torques command) noexcept {
  *
  * @see @ref callback-docs "Documentation on callbacks"
  */
-inline JointPositions MotionFinished(  // NOLINT(readability-identifier-naming)
+inline JointPositions MotionFinished(
     JointPositions command) noexcept {
   command.motion_finished = true;
   return command;

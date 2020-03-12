@@ -3,6 +3,7 @@ language: cpp
 os: linux
 dist: bionic
 arch: amd64
+python: 2.7
 
 git:
   depth: 3
